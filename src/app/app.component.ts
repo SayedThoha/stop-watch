@@ -11,7 +11,6 @@ export class AppComponent implements OnInit {
   title = 'stopWatch';
 
   ngOnInit(): void {}
-
   seconds: number = 0;
   minutes: number = 0;
   hour: number = 0;
@@ -20,7 +19,7 @@ export class AppComponent implements OnInit {
   start() {
     this.interval = setInterval(() => {
       this.seconds++;
-      if (this.seconds > 9) {
+      if (this.seconds > 59) {
         this.minutes++;
         this.seconds = 0;
       }
